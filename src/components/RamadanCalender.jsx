@@ -11,9 +11,13 @@ import {
 } from "@/components/ui/table";
 
 const RamadanCalender = () => {
+
+    const date = new Date()
     const monthName = ['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec',]
-    const getToday = new Date()
-    const today = `${getToday.getDate()}-${monthName[getToday.getMonth()+1]}-${getToday.getFullYear()}`
+    let getdate = `${date.getDate()}-${monthName[date.getMonth()+1]}-${date.getFullYear()}`
+    let today = new Date(Date.parse(getdate))
+
+
   return (
     <>
 
@@ -32,15 +36,29 @@ const RamadanCalender = () => {
     <TableBody>
         {
             ramadan.map((el, key) => {
+              let elDate = new Date(Date.parse(el.date));
+              if (elDate < today) {
                 return(
+                  <TableRow key={key}>
+                  <TableCell className="font-Satoshi text-center text-base text-green-500">{el.sl}</TableCell>
+                  <TableCell className="font-Satoshi text-center text-base text-green-500">{el.date}</TableCell>
+                  <TableCell className="font-Satoshi text-center text-base text-green-500">{el.day}</TableCell>
+                  <TableCell className="font-Satoshi text-center text-base text-green-500">{el.sheri}</TableCell>
+                  <TableCell className="font-Satoshi text-center text-base text-green-500">{el.ifter}</TableCell>
+                  </TableRow>
+              )
+              }
+              else{
+                  return(
                     <TableRow key={key}>
-                    <TableCell className="font-Satoshi text-center text-base">{el.sl}</TableCell>
-                    <TableCell className="font-Satoshi text-center text-base">{el.date}</TableCell>
-                    <TableCell className="font-Satoshi text-center text-base">{el.day}</TableCell>
-                    <TableCell className="font-Satoshi text-center text-base">{el.sheri}</TableCell>
-                    <TableCell className="font-Satoshi text-center text-base">{el.ifter}</TableCell>
+                    <TableCell className="font-Satoshi text-center text-base text-red-500">{el.sl}</TableCell>
+                    <TableCell className="font-Satoshi text-center text-base text-red-500">{el.date}</TableCell>
+                    <TableCell className="font-Satoshi text-center text-base text-red-500">{el.day}</TableCell>
+                    <TableCell className="font-Satoshi text-center text-base text-red-500">{el.sheri}</TableCell>
+                    <TableCell className="font-Satoshi text-center text-base text-red-500">{el.ifter}</TableCell>
                     </TableRow>
                 )
+              }
             })
         }
     </TableBody>
