@@ -16,7 +16,7 @@ const Footer = () => {
                     </a>
                 </div>
                 <div className="flex justify-center">
-                    <a href='https://github.com/samadpls/Islamic-qoutes'><img src='https://islamic-qoutes.cyclic.app' alt='samadpls/islamic-qoutes' className="w-full h-auto" /></a>
+                    <img src='https://islamic-qoutes.cyclic.app' alt='samadpls/islamic-qoutes' className="w-full h-auto" />
                 </div>
             </div>
         </footer>
