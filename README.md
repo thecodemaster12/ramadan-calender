@@ -1,8 +1,15 @@
-# React + Vite
+# Ramadan Calender 🌙 🤲
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This project is a Ramadan Calendar built using React, Tailwind, and the shadcn/ui library. It retrieves data from the `ramadan.js` file and displays it in a table format using the shadcn DataTable component with the help of the `map` function.
 
-Currently, two official plugins are available:
+## Site [Demo](https://ramadanbd.netlify.app/) 
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Installation
+
+```bash
+git clone https://github.com/thecodemaster12/ramadan-calender.git
+
+npm i
+
+npm run dev
+```
