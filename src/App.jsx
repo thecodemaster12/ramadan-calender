@@ -3,6 +3,7 @@ import './App.css'
 import RamadanCalender from './components/RamadanCalender'
 import Footer from './components/Footer'
 import Hero from './components/Hero'
+import Eidmubarak from './components/Eidmubarak'
 
 function App() {
 
@@ -10,7 +11,8 @@ function App() {
     <>
     <main className='max-w-[1200px] m-auto'>
       <Hero />
-      <RamadanCalender className='' />
+      {/* <RamadanCalender className='' /> */}
+      <Eidmubarak />
       <Footer />
     </main>
     </>

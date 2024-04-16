@@ -15,9 +15,9 @@ const Footer = () => {
                     <i class="fa-brands fa-github text-white text-[35px] transition-all ease-linear delay-100 hover:text-[#6e5494] hover:scale-125"></i>
                     </a>
                 </div>
-                <div className="flex justify-center">
+                {/* <div className="flex justify-center">
                     <img src='https://islamic-qoutes.cyclic.app' alt='samadpls/islamic-qoutes' className="w-full h-auto" />
-                </div>
+                </div> */}
             </div>
         </footer>
     </>
